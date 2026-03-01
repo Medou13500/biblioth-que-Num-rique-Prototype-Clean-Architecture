@@ -1,0 +1,99 @@
+/* ===================================== */
+/* =============== FOOTER ============== */
+/* ===================================== */
+
+.footer {
+  background: #0c1c3f; /* 🔥 même couleur que header */
+  color: white;
+  margin-top: 120px;
+}
+
+/* CONTAINER */
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* COLUMN */
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 200px;
+  flex: 1;
+}
+
+/* TITLES */
+.footer-col h4 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 10px;
+}
+
+/* LINKS */
+.footer-col a {
+  text-decoration: none;
+  color: rgba(255,255,255,0.85);
+  transition: 0.3s ease;
+  font-size: 14px;
+}
+
+.footer-col a:hover {
+  color: white;
+}
+
+/* TEXT */
+.footer-col p {
+  color: rgba(255,255,255,0.7);
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+
+  background: #132f6b !important; /* 🔥 force override */
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* ===================================== */
+/* ============== RESPONSIVE =========== */
+/* ===================================== */
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 40px;
+    padding: 50px 20px 40px;
+  }
+
+  .footer-col {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    margin-top: 80px;
+  }
+
+  .footer-container {
+    padding: 40px 15px 30px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+    padding: 20px;
+  }
+}

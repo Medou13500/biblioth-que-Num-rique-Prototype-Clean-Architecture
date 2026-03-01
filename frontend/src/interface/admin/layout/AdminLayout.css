@@ -1,0 +1,68 @@
+/* ===================================== */
+/* ============== LAYOUT =============== */
+/* ===================================== */
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  background: #f9fafb;
+}
+
+/* Zone principale (header + pages) */
+.layout-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* 🔥 évite débordement flex */
+  transition: margin-left 0.3s ease;
+}
+
+/* Contenu interne (pages) */
+.layout-main {
+  flex: 1;
+  padding: 30px;
+  overflow-x: hidden;
+}
+
+/* ===================================== */
+/* ============== RESPONSIVE =========== */
+/* ===================================== */
+
+/* 🔹 Large screens */
+@media (min-width: 1400px) {
+  .layout-main {
+    padding: 40px 60px;
+  }
+}
+
+/* 🔹 Tablet */
+@media (max-width: 1024px) {
+  .layout-main {
+    padding: 25px;
+  }
+}
+
+/* 🔹 Mobile */
+@media (max-width: 768px) {
+
+  .layout {
+    flex-direction: column;
+  }
+
+  .layout-content {
+    width: 100%;
+  }
+
+  .layout-main {
+    padding: 20px;
+  }
+}
+
+/* 🔹 Small Mobile */
+@media (max-width: 480px) {
+
+  .layout-main {
+    padding: 16px;
+  }
+}

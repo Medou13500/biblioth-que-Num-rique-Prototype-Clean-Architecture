@@ -1,0 +1,24 @@
+/* ========================= */
+/* GLOBAL RESET */
+/* ========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  background: #f1f5f9; /* gris clair moderne SaaS */
+  color: #1e293b;
+  overflow-x: hidden;
+}

@@ -1,0 +1,193 @@
+/* ======================================= */
+/* ============ BASE ===================== */
+/* ======================================= */
+
+.admin-dashboard {
+  padding: 60px 80px;
+  min-height: 100vh;
+  background: #f1f5f9; /* gris SaaS */
+  color: #1e293b;
+}
+
+/* ======================================= */
+/* ============ HEADER =================== */
+/* ======================================= */
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.dashboard-header h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.dashboard-header p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* ======================================= */
+/* ============ BUTTON =================== */
+/* ======================================= */
+
+.dashboard-btn {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: white;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  white-space: nowrap;
+}
+
+.dashboard-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+}
+
+/* ======================================= */
+/* ============ GRID ===================== */
+/* ======================================= */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+/* ======================================= */
+/* ============ CARD ===================== */
+/* ======================================= */
+
+.dashboard-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.dashboard-card h3 {
+  margin-bottom: 15px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #64748b;
+}
+
+/* ======================================= */
+/* ============ STATS ==================== */
+/* ======================================= */
+
+.stat-number {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.success {
+  color: #22c55e;
+}
+
+.danger {
+  color: #ef4444;
+}
+
+/* ======================================= */
+/* ============ SECTION ================== */
+/* ======================================= */
+
+.dashboard-section h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.dashboard-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dashboard-section li {
+  margin-bottom: 12px;
+  color: #475569;
+}
+
+/* ======================================= */
+/* ============ RESPONSIVE =============== */
+/* ======================================= */
+
+/* 🔹 Large screens */
+@media (min-width: 1600px) {
+  .admin-dashboard {
+    padding: 80px 140px;
+  }
+
+  .stat-number {
+    font-size: 40px;
+  }
+}
+
+/* 🔹 Tablet */
+@media (max-width: 1024px) {
+  .admin-dashboard {
+    padding: 50px 40px;
+  }
+
+  .dashboard-grid {
+    gap: 20px;
+  }
+}
+
+/* 🔹 Small tablet / large phone */
+@media (max-width: 768px) {
+  .admin-dashboard {
+    padding: 40px 25px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dashboard-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 28px;
+  }
+}
+
+/* 🔹 Mobile */
+@media (max-width: 480px) {
+  .admin-dashboard {
+    padding: 30px 15px;
+  }
+
+  .dashboard-card {
+    padding: 20px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 22px;
+  }
+
+  .dashboard-section h2 {
+    font-size: 18px;
+  }
+}

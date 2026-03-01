@@ -1,0 +1,146 @@
+/* ===================================== */
+/* ============== HEADER =============== */
+/* ===================================== */
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  position: relative;
+  z-index: 500;
+}
+
+/* LEFT (ex: hamburger button si besoin) */
+.admin-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* RIGHT */
+.admin-header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* USER INFO */
+.admin-user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f3f4f6;
+  padding: 8px 14px;
+  border-radius: 999px;
+  flex-wrap: wrap;
+}
+
+.admin-email {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+  white-space: nowrap;
+}
+
+.admin-role-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #2563eb;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+/* LOGOUT BUTTON */
+.admin-logout-button {
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  background: #ef4444;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+  white-space: nowrap;
+}
+
+.admin-logout-button:hover {
+  background: #dc2626;
+}
+
+/* ===================================== */
+/* ============== RESPONSIVE =========== */
+/* ===================================== */
+
+/* 🔹 Large screens */
+@media (min-width: 1400px) {
+  .admin-header {
+    padding: 18px 40px;
+  }
+}
+
+/* 🔹 Tablet */
+@media (max-width: 1024px) {
+  .admin-header {
+    padding: 14px 20px;
+  }
+
+  .admin-email {
+    font-size: 13px;
+  }
+}
+
+/* 🔹 Small tablet */
+@media (max-width: 768px) {
+
+  .admin-header {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .admin-header-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .admin-user-info {
+    flex: 1;
+  }
+
+  .admin-email {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 140px;
+  }
+
+  .admin-logout-button {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+}
+
+/* 🔹 Mobile */
+@media (max-width: 480px) {
+
+  .admin-user-info {
+    padding: 6px 10px;
+  }
+
+  .admin-email {
+    display: none; /* 🔥 cache email pour éviter surcharge */
+  }
+
+  .admin-role-badge {
+    font-size: 10px;
+  }
+
+  .admin-logout-button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}

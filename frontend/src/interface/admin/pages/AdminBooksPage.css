@@ -1,0 +1,243 @@
+/* ===================================== */
+/* ========== PAGE WRAPPER ============= */
+/* ===================================== */
+
+.books-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===================================== */
+/* ============== HEADER =============== */
+/* ===================================== */
+
+.books-header {
+  margin-bottom: 40px;
+  
+}
+
+.books-header h1 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 6px;
+}
+
+.books-header p {
+  color: #cdb5e1;
+  font-size: 15px;
+}
+
+/* ===================================== */
+/* ================ CARD =============== */
+/* ===================================== */
+
+.books-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
+  overflow-x: auto; /* 🔥 important pour mobile */
+}
+
+/* ===================================== */
+/* ================ TABLE ============== */
+/* ===================================== */
+
+.books-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.books-table thead {
+  background: #f8fafc;
+}
+
+.books-table th {
+  text-align: left;
+  padding: 16px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #94a3b8;
+}
+
+.books-table td {
+  padding: 18px 16px;
+  border-top: 1px solid #f1f5f9;
+  font-size: 14px;
+  color: #1e293b;
+}
+
+.books-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* ===================================== */
+/* ============ STATUS BADGES ========== */
+/* ===================================== */
+
+.status-available {
+  background: #dcfce7;
+  color: #15803d;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-unavailable {
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ===================================== */
+/* ============ ACTION BUTTONS ========= */
+/* ===================================== */
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn {
+  background: #e2e8f0;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.delete-btn {
+  background: #fee2e2;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #b91c1c;
+}
+
+/* ===================================== */
+/* ================ FOOTER ============= */
+/* ===================================== */
+
+.books-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+
+/* ===================================== */
+/* ============ PRIMARY BUTTON ========= */
+/* ===================================== */
+
+.books-primary-btn {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.35);
+}
+
+.books-primary-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* ===================================== */
+/* ============ RESPONSIVE ============= */
+/* ===================================== */
+
+/* 🔹 Large screens */
+@media (min-width: 1400px) {
+  .books-page {
+    max-width: 1300px;
+  }
+}
+
+/* 🔹 Tablet */
+@media (max-width: 1024px) {
+
+  .books-page {
+    padding: 0 30px;
+  }
+
+  .books-card {
+    padding: 25px;
+  }
+
+  .books-header h1 {
+    font-size: 28px;
+  }
+}
+
+/* 🔹 Small tablet */
+@media (max-width: 768px) {
+
+  .books-page {
+    padding: 0 20px;
+  }
+
+  .books-header h1 {
+    font-size: 24px;
+  }
+
+  .books-card {
+    padding: 20px;
+  }
+
+  /* 🔥 Permet le scroll horizontal */
+  .books-table {
+    min-width: 600px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    width: 100%;
+  }
+}
+
+/* 🔹 Mobile */
+@media (max-width: 480px) {
+
+  .books-page {
+    padding: 0 15px;
+  }
+
+  .books-header h1 {
+    font-size: 20px;
+  }
+
+  .books-header p {
+    font-size: 13px;
+  }
+
+  .books-table th,
+  .books-table td {
+    padding: 12px 10px;
+    font-size: 12px;
+  }
+
+  .books-footer {
+    justify-content: center;
+  }
+
+  .books-primary-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

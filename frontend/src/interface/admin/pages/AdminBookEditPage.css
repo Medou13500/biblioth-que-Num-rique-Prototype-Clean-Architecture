@@ -1,0 +1,248 @@
+/* =============================== */
+/* ===== PAGE ==================== */
+/* =============================== */
+
+.book-edit-page {
+  min-height: 100vh;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f1f5f9; /* 🔥 gris SaaS uniforme */
+  color: #111827;
+}
+
+/* =============================== */
+/* ===== HEADER ================== */
+/* =============================== */
+
+.book-edit-header {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.book-edit-header h1 {
+  font-size: 40px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+.book-edit-header p {
+  color: #4b5563;
+  font-size: 16px;
+}
+
+.book-edit-back {
+  background: #e5e7eb;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #111827;
+  transition: 0.2s ease;
+  white-space: nowrap;
+}
+
+.book-edit-back:hover {
+  background: #d1d5db;
+}
+
+/* =============================== */
+/* ===== CARD ==================== */
+/* =============================== */
+
+.book-edit-card {
+  width: 100%;
+  max-width: 800px;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 40px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+}
+
+/* =============================== */
+/* ===== FORM ==================== */
+/* =============================== */
+
+.book-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+/* FIELD */
+
+.book-edit-field label {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.book-edit-field input,
+.book-edit-field select {
+  width: 100%;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  font-size: 15px;
+  transition: 0.2s ease;
+  outline: none;
+}
+
+/* FOCUS */
+
+.book-edit-field input:focus,
+.book-edit-field select:focus {
+  border-color: #3b82f6;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+}
+
+/* =============================== */
+/* ===== ACTIONS ================= */
+/* =============================== */
+
+.book-edit-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+/* SECONDARY */
+
+.book-edit-secondary {
+  background: #f1f5f9;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #334155;
+  transition: 0.2s ease;
+}
+
+.book-edit-secondary:hover {
+  background: #e2e8f0;
+}
+
+/* PRIMARY */
+
+.book-edit-primary {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  border: none;
+  padding: 14px 28px;
+  border-radius: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  color: white;
+  transition: 0.2s ease;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+.book-edit-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35);
+}
+
+/* =============================== */
+/* ===== RESPONSIVE ============== */
+/* =============================== */
+
+/* 🔹 Large screens */
+@media (min-width: 1400px) {
+  .book-edit-card {
+    max-width: 900px;
+  }
+
+  .book-edit-header {
+    max-width: 900px;
+  }
+}
+
+/* 🔹 Tablet */
+@media (max-width: 1024px) {
+  .book-edit-page {
+    padding: 60px 25px;
+  }
+
+  .book-edit-header h1 {
+    font-size: 32px;
+  }
+
+  .book-edit-card {
+    padding: 30px;
+  }
+}
+
+/* 🔹 Small tablet */
+@media (max-width: 768px) {
+
+  .book-edit-page {
+    padding: 50px 20px;
+  }
+
+  .book-edit-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .book-edit-header h1 {
+    font-size: 26px;
+  }
+
+  .book-edit-card {
+    padding: 24px;
+    border-radius: 20px;
+  }
+
+  .book-edit-actions {
+    flex-direction: column;
+  }
+
+  .book-edit-secondary,
+  .book-edit-primary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* 🔹 Mobile */
+@media (max-width: 480px) {
+
+  .book-edit-page {
+    padding: 40px 15px;
+  }
+
+  .book-edit-header h1 {
+    font-size: 22px;
+  }
+
+  .book-edit-header p {
+    font-size: 14px;
+  }
+
+  .book-edit-field input,
+  .book-edit-field select {
+    padding: 14px;
+    font-size: 14px;
+  }
+
+  .book-edit-card {
+    padding: 20px;
+    border-radius: 18px;
+  }
+}
